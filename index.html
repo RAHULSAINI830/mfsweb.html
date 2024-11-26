@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development - Interactive Steps</title>
+ <style>
+  /* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00a2ff, #1a75ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+.cta-button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #00a2ff, #1a75ff);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #1a75ff, #00a2ff);
+}
+
+/* Interactive Steps Section */
+.interactive-steps {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+}
+
+.interactive-steps h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #00a2ff;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.circle-step {
+  text-align: center;
+  width: 180px;
+  position: relative;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #00a2ff, #1a75ff);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.circle-step h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.circle-step p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Arrow Styles */
+.arrow {
+  width: 60px;
+  height: 2px;
+  background: #00a2ff;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  border-left: 10px solid #00a2ff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 4rem 2rem;
+  background: #141414;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00a2ff;
+  margin-bottom: 2rem;
+}
+
+.choose-us-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.choose-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 162, 255, 0.5);
+}
+
+.choose-card h3 {
+  font-size: 1.5rem;
+  color: #00a2ff;
+}
+
+.choose-card p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.note {
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+  color: #aaa;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #0a0a0a;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #00a2ff;
+}
+
+.cta-section p {
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+ </style>
+ 
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="hero-title">Web Development</h1>
+      <p class="hero-subtitle">
+        Because your current website deserves a modern art upgrade 🎨
+      </p>
+      <button class="cta-button">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Circular Steps with Connections -->
+  <section class="interactive-steps">
+    <h2>What We Build (Besides Your Internet Street Cred)</h2>
+    <div class="circle-container">
+      <!-- Step 1 -->
+      <div class="circle-step" id="step-1">
+        <div class="circle">1</div>
+        <h3>Speed</h3>
+        <p>Websites faster than your manager leaving the office on a Friday.</p>
+      </div>
+      <!-- Arrow -->
+      <div class="arrow">
+        <i class="arrow-icon"></i>
+      </div>
+      <!-- Step 2 -->
+      <div class="circle-step" id="step-2">
+        <div class="circle">2</div>
+        <h3>Responsiveness</h3>
+        <p>Mobile responsiveness smoother than your tech lead’s excuses.</p>
+      </div>
+      <!-- Arrow -->
+      <div class="arrow">
+        <i class="arrow-icon"></i>
+      </div>
+      <!-- Step 3 -->
+      <div class="circle-step" id="step-3">
+        <div class="circle">3</div>
+        <h3>User Experience</h3>
+        <p>More intuitive than your cat finding an open laptop to sit on.</p>
+      </div>
+      <!-- Arrow -->
+      <div class="arrow">
+        <i class="arrow-icon"></i>
+      </div>
+      <!-- Step 4 -->
+      <div class="circle-step" id="step-4">
+        <div class="circle">4</div>
+        <h3>Security</h3>
+        <p>Security tighter than your budget after buying the latest iPhone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <h2>Why Choose Us For Your Web Dreams</h2>
+    <div class="choose-us-container">
+      <div class="choose-card">
+        <h3>Frontend Mastery</h3>
+        <p>Prettier than your Instagram filters, with designs that captivate your users.</p>
+      </div>
+      <div class="choose-card">
+        <h3>Backend Strength</h3>
+        <p>Stronger than your gym trainer's protein shake, ensuring smooth performance.</p>
+      </div>
+      <div class="choose-card">
+        <h3>Bulletproof Security</h3>
+        <p>Tighter than your budget after buying the latest iPhone, protecting your data.</p>
+      </div>
+    </div>
+    <p class="note">*But my current website works fine!* Sure, and dial-up internet "worked fine" in 1995. Time to join us in the future!</p>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Let’s Build Something Great</h2>
+    <p>Contact us to elevate your online presence today.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+</body>
+</html>
